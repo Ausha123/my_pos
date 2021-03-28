@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ausha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assests/css/bootstrap.css">
+</head>
+<body>
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#" id="btnHome">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#" id="btnCustomer">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#" id="btnItem">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#" id="btnOrders">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#" id="btnOrderDetails">Order Details</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Home -->
+
+<div class="container-fluid mt-5 " id="home">
+    <div class="row justify-content-around">
+    </div>
+</div>
+
+
+<!--Dashboard-->
+
+
+<div class="container-fluid mt-5 " id="dashboardform">
+    <div class="row justify-content-around">
+        <div class="col-2 bg-warning text-white" style="width: 300px">
+            <h1 class="p-3" style="font-size: 40px">20</h1>
+            <h1 class="p-2" style="font-size: 30px">Customers</h1>
+        </div>
+        <div class="col-2 bg-success text-white" style="width: 300px">
+            <h1 class="p-3" style="font-size: 40px">50</h1>
+            <h1 class="p-2" style="font-size: 30px">Items</h1>
+        </div>
+        <div class="col-2 bg-primary text-white" style="width: 300px">
+            <h1 class="p-3" style="font-size: 40px">40</h1>
+            <h1 class="p-2" style="font-size: 30px">Orders</h1>
+        </div>
+<!--        <div class="col-2 bg-danger text-white" style="width: 300px">-->
+<!--            <h1 class="p-3" style="font-size: 40px">05</h1>-->
+<!--            <h1 class="p-2" style="font-size: 30px">Pending Orders</h1>-->
+<!--        </div>-->
+    </div>
+</div>
+
+<!--Customer Form-->
+
+<div class="container-fluid mt-5" id="customerform">
+    <!-- <h1 class="mx-4">Customer Form</h1> -->
+    <div class="row mt-1 p-0">
+        <div class="col-xl-8 col-lg-6">
+             
+            <table class="table table-hover border mt-1" >
+                <thead class="" style="background: 	 	#DC143C">
+                <tr>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Customer Address</th>
+                    <th scope="col">Customer Salary</th>
+                    <!-- <th scope="col">Customer Contact</th>
+                    <th scope="col">Date Of Birth</th>
+                    <th scope="col">Gender</th> -->
+                </tr>
+                </thead>
+                <tbody class="" style="background: white" id="tblCustomer">
+                <tr>
+                     
+                    <!-- <td>C001</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>abc</td> -->
+                </tr>
+                <tr>
+                     
+                    <!-- <td>C002</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>abc</td> -->
+                </tr>
+                <tr>
+                    <!-- <td>C003</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>Abc</td>
+                    <td>abc</td> -->
+                </tr>
+               </tbody>
+            </table>
+        </div>
+        <div class="col-xl-4">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 23px; background: dodgerblue">
+                    Manage Customers
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-1">
+                        <div class="form-group col-12">
+                            <lable>Customer ID</lable>
+                            <input type="text" id="txtCustomerId" class="form-control">
+                            <span class="control-error" id="lblcusid"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Customer Name</lable>
+                            <input type="text" id="txtCustomerName" class="form-control" >
+                            <span class="control-error" id="lblcusname"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Customer Address</lable>
+                            <input type="text" id="txtCustomerAddress" class="form-control" >
+                            <span class="control-error" id="lblcusaddress"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Customer Salary</lable>
+                            <input type="text" id="txtCustomerSalary" class="form-control" >
+                            <span class="control-error" id="lblcussalary"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Customer Contact</lable>
+                            <input type="text" id="txtCustomerContact" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                        <label>Date Of Birth</label>
+                        <input  id="dateofbirth" class="form-control" type="date">
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                        <label>Gender</label>
+                        <select aria-label="Default select example" class="form-select" id="cmbGender">
+                            <option value=""></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        </div>
+                    </div> -->
+                    <div class="row p-1 mt-5" align="right">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn bg-success text-white fw-bold" id="btnCustomerAdd">Save</button>
+                            <button type="button" class="btn bg-warning text-white fw-bold" id="btnCustomerUpdate">Update</button>
+                            <button type="button" class="btn bg-danger text-white fw-bold" id="btnCustomerDelete">Delete</button>
+                            <!-- <button type="button" class="btn btn-outline-danger fw-bold">Cancel</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Item Form-->
+
+<div class="container-fluid mt-5" id="itemform">
+    <!-- <h1 class="mx-4">Item Form</h1> -->
+    <div class="row mt-1 p-0">
+        <div class="col-xl-8 col-lg-6">
+            <table class="table table-hover border mt-1" >
+                <thead class="" style="background:  	#DC143C">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <!-- <th scope="col">Discription</th> -->
+                    <th scope="col">In Stocks</th>
+                    <th scope="col">Unit Price</th>
+                </tr>
+                </thead>
+                <tbody class="" style="background: white" id="tblItem">
+                <tr>
+                    <!-- <td>I001</td>
+                    <td>abc</td>
+                    <td>abc</td>
+                    <td>200</td>
+                    <td>abc</td> -->
+                </tr>
+                <tr>
+                    <!-- <td>I002</td>
+                    <td>abc</td>
+                    <td>abc</td>
+                    <td>100</td>
+                    <td>abc</td> -->
+                </tr>
+                <tr>
+                    <!-- <td>I003</td>
+                    <td>abc</td>
+                    <td>abc</td>
+                    <td>300</td>
+                    <td>abc</td> -->
+                </tr>
+                 
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xl-4">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 23px; background: #2E8B57">
+                    Manage Items
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-1">
+                        <div class="form-group col-12">
+                            <lable>Item Code</lable>
+                            <input type="text" id="txtItemCode" class="form-control">
+                            <span class="control-error" id="lblitemcode"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Item Name</lable>
+                            <input type="text" id="txtItemName" class="form-control" >
+                            <span class="control-error" id="lbldescription"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Discription</lable>
+                            <textarea type="text" id="txtDiscription" class="form-control" ></textarea>
+                        </div>
+                    </div> -->
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>In Stocks</lable>
+                            <input type="number" id="txtQtyOnHand" class="form-control" >
+                            <span class="control-error" id="lblqty"></span>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-0">
+                        <div class="form-group col-12">
+                            <lable>Unit Price</lable>
+                            <input type="text" id="txtUnitePrice" class="form-control" >
+                            <span class="control-error" id="lblprice"></span>
+                        </div>
+                    </div>
+                    <!-- <div class="row p-2 mt-0">
+                        <div class="col-12">
+                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+                        </div>  
+                    </div> -->
+
+                    <div class="row p-1 mt-5" align="right">
+                        <div class="form-group col-12">
+                            <button type="button" class="btn bg-success text-white fw-bold" id="btnItemAdd">Save</button>
+                            <button type="button" class="btn bg-warning text-white fw-bold" id="btnItemUpdate">Update</button>
+                            <button type="button" class="btn bg-danger text-white fw-bold" id="btnItemDelete">Delete</button>
+                            <!-- <button type="button" class="btn btn-outline-danger fw-bold">Cancel</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- order form -->
+
+<div class="container-fluid mt-5 " id="orderform">
+    <h1 class="mx-3">Order Form</h1>
+    <div class="row mt-3 p-3">
+        <div class="col-xl-4 col-lg-6">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 25px; background: dodgerblue">
+                    Invoice Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-5 ">
+                            <lable>Order ID:</lable>
+                            <input type="text" id="txtOrderId" class="form-control" >
+                            <span class="control-error" id="lblorderid"></span>
+                        </div>
+                        <div class="form-group col-7 ">
+                            <lable>Order Date:</lable>
+                            <input type="date" id="txtDate" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>Select Customer ID:</lable>
+                            <select class="form-control" id="cmbCustomerId">
+                                <option selected="selected" disabled="disabled">-Select Customer-</option>
+                                <span class="control-error" id="lblselectid"></span>
+                            </select>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Customer ID:</lable>
+                            <input type="text" id="txtCustomerId2" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>Customer Name:</lable>
+                            <input type="text" id="txtCustomerName2" class="form-control" disabled>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Customer Salary:</lable>
+                            <input type="text" id="txtCustomerSalary2" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Customer Address:</lable>
+                            <input type="text" id="txtCustomerAddress2" class="form-control" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 25px; background: dodgerblue">
+                    Item Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>Select Item Code:</lable>
+                            <select class="form-control" id="cmbItemCode">
+                                <option selected="selected" disabled="disabled">-Select Item-</option>
+                                <span class="control-error" id="lblselectcode"></span>
+                            </select>
+                        </div>
+                        <div class="form-group col-6 ">
+                            <lable>Item Code:</lable>
+                            <input type="text" id="txtItemCode2" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-12">
+                            <lable>Description:</lable>
+                            <input type="text" id="txtDescription2" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <lable>QTY on Hand:</lable>
+                            <input type="text" id="txtQtyOnHand2" class="form-control" disabled>
+                        </div>
+                        <div class="form-group col-6">
+                            <lable>Unit Price</lable>
+                            <input type="text" id="txtUnitPrice2" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-8">
+                            <lable>Order Quantity</lable>
+                            <input type="number" min="0" id="txtOrderQTY" class="form-control">
+                            <span class="control-error" id="lblorderqty"></span>
+                        </div>
+                        <div class="form-group col-4 mt-4">
+                            <button type="submit" class="btn btn-outline-primary fw-bold" id="btnAddToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-12">
+            <div class="bg-white card">
+                <div class="card-header text-white" style="font-size: 25px; background: dodgerblue">
+                    Payment Details
+                </div>
+                <div class="card-body bg-white text-dark">
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Total:</lable>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-primary" style="font-size: 30px" id="lblTotal">0.00</span>
+                                Rs/=
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Sub Total:</lable>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-danger" style="font-size: 30px" id="lblSubTotal">
+                                    0.00
+                                </span>
+                                Rs/=
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Payment:</lable>
+                            </div>
+                            <div class="col-12">
+                                <input type="number" min="0" class="form-control" id="txtPayment">
+                                <span class="control-error" id="lblpayment"></span>
+                            </div>
+                        </div>
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Discount:</lable>
+                            </div>
+                            <div class="col-12">
+                                <input type="number" min="0" class="form-control" id="txtDiscount">
+                                <span class="control-error" id="lbldisount"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-2 mt-3">
+                        <div class="form-group col-6">
+                            <div class="col-12">
+                                <lable>Balance:</lable>
+                            </div>
+                            <div class="col-12">
+                                <input type="number" min="0" class="form-control" id="txtBalance" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group col-4">
+                            <button type="submit" class="btn btn-outline-success mt-4 fw-bold"
+                                    style="text-align: center" id="btnPlaceOrder">Place Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table table-hover border mt-3 p-3 ">
+        <thead class="bg-danger text-white">
+        <tr>
+            <th scope="col">Item Code</th>
+            <th scope="col">Description</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Buying Qty</th>
+            <th scope="col">Total</th>
+        </tr>
+        </thead>
+        <tbody class="bg-secondary text-white" id="tblCart"></tbody>
+    </table>
+</div>
+
+
+<!-- order_details form -->
+<div class="container-fluid mt-5" id="order_detailsform">
+    <div class="row mt-1 p-0">
+        <div class="col-4">
+            <table class="table table-hover border mt-1">
+                <thead class="" style="background:  	#DC143C">
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+                <tbody class="" style="background: white">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>...</td>
+                    <td>...</td>                     
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>...</td>
+                    <td>...</td>                     
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>...</td>
+                    <td>...</td>                    
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>...</td>
+                    <td>...</td>                     
+                </tr> 
+                </tbody>
+            </table>
+        </div>
+        <div class="col-8">
+            <table class="table table-hover border mt-1">
+                <thead class="" style="background: 	 	#DC143C">
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>                   
+                </tr>
+                </thead>
+                <tbody class="" style="background: white">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="assests/jquery/jquery-3.6.0.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/DashboardController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="controller/OrdersController.js"></script>
+<script src="db/DB.js"></script>
+<script src="dto/CustomerDTO.js"></script>
+<script src="dto/ItemDTO.js"></script>
+<script src="dto/OrderDTO.js"></script>
+<script src="dto/OrderDetailDTO.js"></script>
+
+
+<script>
+  
+
+     
+
+    
+     
+
+    
+</script>
+
+</body>
+</html>
